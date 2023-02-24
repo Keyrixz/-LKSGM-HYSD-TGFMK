@@ -1,0 +1,41 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Tower Of Hell | VORKEY HUB", "Synapse")
+local Tab = Window:NewTab("Home")
+local Section = Tab:NewSection("Enjoy Hacks")
+Section:NewLabel("VORKEY HUB")
+Section:NewLabel("The Responsibilities Are Not Ours")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+Section:NewSlider("Walkspeed", "Change Your Walkspeed!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "Change Your JumpPower!", 500, 42, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewButton("Instant Win", "Finish!", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.tower.sections.finish.exit.ParticleBrick.CFrame
+end)
+local Tab = Window:NewTab("Extras")
+local Section = Tab:NewSection("Extras")
+Section:NewButton("Give All Tools", "Get All Tools!", function()
+    --Give all items
+
+for i, v in pairs (game:GetService("ReplicatedStorage").Gear:GetChildren()) do
+if v:IsA("Tool") then
+poop = v:Clone()
+poop.Parent = game:GetService("Players").LocalPlayer:FindFirstChild("Backpack")
+end
+end
+end)
+Section:NewButton("GodMode", "GodMode", function()
+function f()
+   game.Players.LocalPlayer.Character.KillScript:Destroy()
+end
+hookfunction(f, function()
+   game.Players.LocalPlayer.Character.KillScript:Destroy()
+end)
+
+f()
+end)
+
+-- Fake Script --
