@@ -1,0 +1,282 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Goddess Tycoon | VORKEY HUB",
+   LoadingTitle = "Loading Menu...",
+   LoadingSubtitle = "VORKEY HUB",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Vorkeyhub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "https://discord.gg/84g87PKugs", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Vorkey Hub Key System",
+      Subtitle = "Key System",
+      Note = "Get Key From Discord",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"VORKEYHUBISBETTER"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Main")
+local Slider = Tab:CreateSlider({
+   Name = "Walkspeed Changer",
+   Range = {16, 500},
+   Increment = 16,
+   Suffix = "Walkspeed",
+   CurrentValue = 16,
+   Flag = "Walkspeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(v)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+local Slider = Tab:CreateSlider({
+   Name = "Jumppower Changer",
+   Range = {50, 500},
+   Increment = 50,
+   Suffix = "JumpPower",
+   CurrentValue = 50,
+   Flag = "JumpPower", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(v)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "God Mode",
+   Callback = function()
+   game.Players.LocalPlayer.Character.KillScript:Destroy()
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Player")
+local Button = Tab:CreateButton({
+   Name = "Lissa",
+   Callback = function()   
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-140.831436, 33.9576378, 59.0006866, 0.278034866, 9.53785388e-08, -0.960570991, -5.33018074e-08, 1, 8.38655083e-08, 0.960570991, 2.78826349e-08, 0.278034866)
+   Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hestia",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-65.9872131, 33.9576683, 149.081589, 0.604528666, 2.97739984e-08, -0.796583354, -1.64668936e-08, 1, 2.48803698e-08, 0.796583354, -1.92364458e-09, 0.604528666)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Luna",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-148.067001, 33.957653, -56.4303589, -0.359032333, 0, -0.933325112, 0, 1, 0, 0.933325112, 0, -0.359032333)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Spidra",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(46.6368637, 33.957592, 176.340591, 0.995465159, 3.98791187e-08, 0.0951265618, -4.49277415e-08, 1, 5.09309501e-08, -0.0951265618, -5.49738104e-08, 0.995465159)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Thalia",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-87.8657913, 33.917942, -154.971024, -0.799581587, -2.48986236e-08, -0.600557446, -1.95419823e-08, 1, -1.5441012e-08, 0.600557446, -6.10265949e-10, -0.799581587)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Gaia",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(21.6011658, 33.957653, -196.776489, -0.999563456, 2.1913424e-08, -0.0295457672, 2.4167008e-08, 1, -7.59172636e-08, 0.0295457672, -7.65981483e-08, -0.999563456)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Irene",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(133.228836, 33.9575729, -168.429672, -0.782139719, -1.55735069e-08, 0.623103082, -9.26928667e-09, 1, 1.335835e-08, -0.623103082, 4.67237493e-09, -0.782139719)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Bia",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(208.706039, 33.9576683, -80.5306931, -0.337566584, 1.09622803e-07, 0.941301644, 3.32201644e-08, 1, -1.04545428e-07, -0.941301644, -4.02084677e-09, -0.337566584)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Rosa",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(215.429352, 33.9576073, 35.0626564, 0.264980435, -1.76901445e-08, 0.964253783, 1.32890577e-07, 1, -1.81728712e-08, -0.964253783, 1.32955705e-07, 0.264980435)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Aura",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(154.32663, 33.9576035, 133.459259, 0.805995524, 3.73595839e-08, 0.591921628, 2.55401833e-08, 1, -9.78927872e-08, -0.591921628, 9.40189366e-08, 0.805995524)
+      Rayfield:Notify({
+   Title = "VORKEY HUB",
+   Content = "Teleporting",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Close",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Tab = Window:CreateTab("Settings", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Settings")
+local Button = Tab:CreateButton({
+   Name = "Destory UI",
+   Callback = function()
+   Rayfield:Destroy()
+   -- The function that takes place when the button is pressed
+   end,
+})
